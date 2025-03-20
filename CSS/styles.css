@@ -1,0 +1,388 @@
+/* Elegant Jewelry Shop Styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary-color: #957186;
+  --secondary-color: #2d2d2d;
+  --accent-color: #d4b5c0;
+  --light-color: #ffffff;
+  --soft-color: #f8f5f7;
+  --dark-color: #1a1a1a;
+  --text-color: #4a4a4a;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  line-height: 1.8;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  font-weight: 500;
+}
+
+/* Navigation */
+.custom-nav {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1.2rem 0;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(149, 113, 134, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.custom-nav.scrolled {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 15px rgba(149, 113, 134, 0.08);
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary-color) !important;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: var(--text-color) !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.2rem !important;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 60%;
+}
+
+/* Headings */
+.fun-title,
+.display-4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--secondary-color);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.display-4 {
+  font-size: 3.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+/* Cards */
+.project-card {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 20px rgba(149, 113, 134, 0.06);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transform-origin: center;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(149, 113, 134, 0.12);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.card-img-top {
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .card-img-top {
+  transform: scale(1.03);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 0.9rem 2.2rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(149, 113, 134, 0.2);
+}
+
+/* Form Elements */
+.form-control {
+  border: 1px solid rgba(149, 113, 134, 0.2);
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(149, 113, 134, 0.1);
+}
+
+.form-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Container Styling */
+.container {
+  padding: 4rem 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Price Tags */
+.h4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* Reviews Section */
+.text-warning {
+  color: var(--primary-color) !important;
+}
+
+/* Section Backgrounds */
+.section-soft {
+  background-color: rgba(248, 245, 247, 0.5);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2.3rem;
+  }
+  
+  .container {
+    padding: 2rem 1rem;
+  }
+  
+  .card-img-top {
+    height: 240px;
+  }
+}
+
+/* Add smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add decorative elements */
+.fun-title::before {
+  content: '•';
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+  font-size: 1.2em;
+}
+
+/* Add hover effect for review cards */
+.project-card.review-card:hover {
+  transform: translateX(8px);
+}
+
+/* Add gradient overlay to featured images */
+.card-img-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(45,45,45,0.8) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+}
+
+.project-card:hover .card-img-overlay {
+  opacity: 1;
+}
+
+/* Add subtle animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add divider styling */
+.divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--primary-color);
+  margin: 2rem auto;
+  opacity: 0.6;
+}
+
+/* Add text highlights */
+.text-highlight {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Add card content styling */
+.card-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Add hover effect for images */
+.hover-zoom {
+  transition: transform 0.5s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.02);
+}
+
+.lead {
+  font-weight: 500;
+}
+
+/* Add scroll animations */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease;
+}
+
+.slide-in-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.slide-in-left.active,
+.slide-in-right.active,
+.slide-in-up.active {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Add stagger delay utilities */
+.delay-1 {
+  transition-delay: 0.2s;
+}
+
+.delay-2 {
+  transition-delay: 0.4s;
+}
+
+.delay-3 {
+  transition-delay: 0.6s;
+}
+
+/* Social Media Buttons */
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-social {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+}
+
+.btn-social:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(149, 113, 134, 0.2);
+}
+
+.btn-social i {
+  font-size: 1.2rem;
+}
+
+/* Instagram Button */
+.btn-social:nth-child(1) {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* Facebook Button */
+.btn-social:nth-child(2) {
+  background-color: #4267B2;
+}
+
+/* WhatsApp Button */
+.btn-social:nth-child(3) {
+  background-color: #25D366;
+}
+  
